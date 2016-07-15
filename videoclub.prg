@@ -9,10 +9,10 @@ Function Main
 	PUBLIC aValInd:={}
 	
 	PRIVATE cDbPelic:="pelic"
+	PRIVATE oDBPelic
 	
 	If !File(cDbPelic+".dbf")
 		CrearDB()
-		
 	Endif
 	
 	AbreDB(cDbPelic,aIndices)
@@ -49,8 +49,8 @@ Procedure CrearDB()
 	
 	OrdCreate(m->cDbPelic+"1",,"TITULO")
 	OrdCreate(m->cDbPelic+"2",,"GENERO")
-	OrdCreate(m->cDbPelic+"",,"ADULTOS")
-	OrdCreate(m->cDbPelic+"",,"DIRECTOR")
+	OrdCreate(m->cDbPelic+"3",,"ADULTOS")
+	OrdCreate(m->cDbPelic+"4",,"DIRECTOR")
 	OrdCreate(m->cDbPelic+"5",,"PRECIO")
 	OrdCreate(m->cDbPelic+"6",,"EXIST")
 	OrdCreate(m->cDbPelic+"7",,"DISP")
